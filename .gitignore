@@ -1,0 +1,9 @@
+*~
+*.xml
+*.so
+test/*.h
+test/*.c
+test/*.so
+test/*.xml
+test/*-spec.scm
+test/*-wrapset.scm
