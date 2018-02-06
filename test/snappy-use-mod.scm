@@ -1,0 +1,7 @@
+(eval-when (eval load compile)
+           (define (make-ld-path)
+             (let ((ldp (getenv "LD_LIBRARY_PATH")))
+               (if ldp (string-append ldp ":" (getcwd)) (getcwd))))
+           (setenv "LD_LIBRARY_PATH" (make-ld-path))
+           (load "snappy-c-wrapset.scm"))
+(use-modules (libsnappy-c))
